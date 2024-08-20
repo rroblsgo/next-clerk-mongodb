@@ -2,7 +2,7 @@ import { currentUser } from '@clerk/nextjs/server'
 
 export default async function Page() {
   const user = await currentUser()
-  console.log('server user', user)
+  // console.log('server user', user)
 
   return (
     <section className='py-24'>
