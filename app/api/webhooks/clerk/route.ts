@@ -64,6 +64,7 @@ export async function POST(req: Request) {
     const user = {
       clerkUserId: id,
       email: email_addresses[0].email_address,
+      strategy: email_addresses[0].verification?.strategy,
       ...(first_name ? { firstName: first_name } : {}),
       ...(last_name ? { lastName: last_name } : {}),
       ...(image_url ? { imageUrl: image_url } : {}),
@@ -86,6 +87,7 @@ export async function POST(req: Request) {
     const user = {
       clerkUserId: id,
       email: email_addresses[0].email_address,
+      strategy: email_addresses[0].verification?.strategy,
       ...(first_name ? { firstName: first_name } : {}),
       ...(last_name ? { lastName: last_name } : {}),
       ...(image_url ? { imageUrl: image_url } : {}),
